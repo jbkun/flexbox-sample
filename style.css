@@ -1,0 +1,62 @@
+html {
+  background: url('dark-bg.jpg') center center no-repeat;
+  background-color: black;
+  background-size: cover;
+}
+
+body {
+  padding: 2em;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  color: white;
+}
+
+.container > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.header {
+}
+
+.header-nav {
+  text-align: right;
+  border: 1px solid red;
+}
+
+.footer {
+}
+
+.main {
+  text-align: left;
+}
+
+.main-aside {
+  border: 1px solid yellow;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media all and (min-width: 600px) {
+  .main-aside { flex: 1 0 0; }
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .main-aside { order: 1; }
+  .main    { order: 2; }
+  .footer  { order: 3; }
+}
+
+.article {
+  padding: 1em;
+  border: 1px solid blue;
+}
+
+.footer {
+  border: 1px solid green;
+}
